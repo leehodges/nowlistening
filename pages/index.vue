@@ -5,7 +5,7 @@
       😭 {{ $nuxt.layout && $nuxt.layout.authorName }} hasn't connected yet. 😭
       <a
         href="http://twitter.com/leehodges"
-      >Complain!</a>
+      >Nudge her</a>
     </p>
   </section>
 </template>
