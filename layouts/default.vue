@@ -17,6 +17,7 @@ export default {
   components: { Header, Footer },
   titleShort: 'is Coding to',
   authorName: 'Lee',
+  test: 'China',
   computed: {
     isAuth() {
       return this.$route.name === 'auth'
@@ -36,7 +37,7 @@ export default {
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Bungee+Hairline|Oswald'
+          href: 'https://fonts.googleapis.com/css?family=Monoton|Oswald|Creepster'
         }
       ]
     }
@@ -57,7 +58,7 @@ body {
   padding: 0;
   margin: 0;
   color: white;
-  font-family: 'Bungee Hairline', monospace;
+  font-family: 'Monoton', monospace;
 }
 .base {
   background-size: cover;

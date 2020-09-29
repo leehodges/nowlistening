@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>
-      {{$nuxt.layout && $nuxt.layout.authorName}} {{ $nuxt.layout && $nuxt.layout.titleShort }}
+      {{$nuxt.layout && $nuxt.layout.options.authorName}} {{ $nuxt.layout && $nuxt.layout.options.titleShort }}
       <nuxt-link to="/auth" name="auth" aria-label="Login" :aria-current="isAuth"/>
     </h1>
   </header>
@@ -18,9 +18,10 @@ export default {
 <style scoped>
 h1 {
   line-height: 0.65em;
-  font-family: 'Oswald', monospace;
+  font-family: 'Creepster', monospace;
   letter-spacing: 1px;
-  font-size: 15em;
+  font-size: 13em;
+  color: #ff4d4d;
   transform: rotate(-3deg) translateY(-50%);
   -webkit-box-reflect: below 0px
   linear-gradient(transparent, rgba(255, 255, 255, 0.3));

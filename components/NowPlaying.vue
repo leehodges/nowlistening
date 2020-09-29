@@ -9,7 +9,7 @@
         <h2 aria-live="polite">{{ name }}</h2>
         <p aria-live="polite">{{ artistsList }}</p>
         <p :class="statusClass">
-          <span>{{ $nuxt.layout && $nuxt.layout.authorName }} {{ status }}.</span>
+          <span>{{ $nuxt.layout && $nuxt.layout.options.authorName }} {{ status }}.</span>
           <a v-if="href" :href="href">Listen?</a>
         </p>
       </div>
