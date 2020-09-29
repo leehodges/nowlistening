@@ -1,6 +1,6 @@
 <template functional>
   <footer>
-   Simple Nuxt Now Playing Spotify App
+    Simple Nuxt Now Playing Spotify App
     Lee Hodges 2020
   </footer>
 </template>

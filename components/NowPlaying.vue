@@ -6,10 +6,10 @@
         <Progress :class="className" :progressPercent="progress" :image="image"/>
       </aside>
       <div class="metadata">
-        <h2 aria-live="polite">{{name}}</h2>
-        <p aria-live="polite">{{artistsList}}</p>
+        <h2 aria-live="polite">{{ name }}</h2>
+        <p aria-live="polite">{{ artistsList }}</p>
         <p :class="statusClass">
-          <span>{{$nuxt.layout && $nuxt.layout.authorName}} {{ status }}.</span>
+          <span>{{ $nuxt.layout && $nuxt.layout.authorName }} {{ status }}.</span>
           <a v-if="href" :href="href">Listen?</a>
         </p>
       </div>
@@ -21,10 +21,10 @@
 import Progress from './Progress.vue'
 
 export default {
-  components: { Progress },
+  components: {Progress},
   props: ['isPlaying', 'nowPlaying'],
   data() {
-    return { staleTimer: '', trackTimer: '' }
+    return {staleTimer: '', trackTimer: ''}
   },
   computed: {
     className() {
@@ -34,9 +34,9 @@ export default {
       return this.isPlaying ? 'is-playing status' : 'status'
     },
     image() {
-      const { album, image } = this.nowPlaying
+      const {album, image} = this.nowPlaying
       if (Boolean(album)) {
-        const { url } = album.images[0]
+        const {url} = album.images[0]
         return url
       }
       return Boolean(image)
@@ -47,11 +47,11 @@ export default {
       return this.$store.state.trackProgress
     },
     artistsList() {
-      const { artists } = this.nowPlaying
+      const {artists} = this.nowPlaying
       return artists ? artists.map(artist => artist.name).join(', ') : null
     },
     href() {
-      const { external_urls } = this.nowPlaying
+      const {external_urls} = this.nowPlaying
       return external_urls ? external_urls.spotify : null
     },
     name() {
@@ -73,10 +73,10 @@ export default {
   },
   methods: {
     updateProgress(progress = 0, duration = 0) {
-      this.$store.dispatch('updateProgress', { progress, duration })
+      this.$store.dispatch('updateProgress', {progress, duration})
     },
     async getNowPlaying() {
-      const { progress_ms, is_playing, item } = await this.$axios.$get(
+      const {progress_ms, is_playing, item} = await this.$axios.$get(
         `/api/spotify/now-playing/`
       )
       if (Boolean(item)) {
@@ -89,7 +89,7 @@ export default {
         } else {
           this.updateProgress(progress, duration)
         }
-        const { id } = this.nowPlaying
+        const {id} = this.nowPlaying
         if (item.id !== id) {
           this.$store.dispatch('updateTrack', item)
         }
@@ -126,6 +126,7 @@ section {
   grid-template-columns: 42% 58%;
   align-items: center;
 }
+
 aside {
   position: relative;
   min-width: 50px;
@@ -159,16 +160,19 @@ section:before {
   transform: rotate(3deg);
   background: rgba(255, 255, 255, 0.03);
 }
+
 .metadata {
   padding-left: 1.4em;
   position: relative;
   z-index: 2;
 }
+
 h2 {
   font-family: 'Oswald', monospace;
   margin: 0;
   font-size: 3em;
 }
+
 p {
   margin: 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
@@ -177,9 +181,11 @@ p {
 .fade-enter-active {
   transition: opacity 600ms ease-out;
 }
+
 .fade-leave-active {
   opacity: 0;
 }
+
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
@@ -192,6 +198,7 @@ p {
   display: block;
   white-space: nowrap;
 }
+
 .is-playing span {
   opacity: 0;
   transition: opacity 600ms ease-out;
@@ -202,10 +209,12 @@ p {
     grid-template-rows: 42% 58%;
     grid-template-columns: 100%;
   }
+
   aside {
     max-width: 160px;
     margin: 0 auto;
   }
+
   .metadata {
     text-align: center;
     padding: 0;

@@ -15,7 +15,7 @@ import Footer from '~/components/Footer.vue'
 
 export default {
   components: { Header, Footer },
-  titleShort: 'is Listening',
+  titleShort: 'is Coding to',
   authorName: 'Lee',
   computed: {
     isAuth() {
@@ -32,7 +32,7 @@ export default {
     return {
       title: `${this.$options.authorName} ${
         this.$options.titleShort
-      } ·X· A Musical App`,
+      } Spotify`,
       link: [
         {
           rel: 'stylesheet',

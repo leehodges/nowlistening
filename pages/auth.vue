@@ -5,8 +5,9 @@
         to="/"
         name="index"
         :aria-current="'/' === $nuxt.$route.path ? 'page' : false"
-      >Close</nuxt-link>
-      {{message}}
+      >Close
+      </nuxt-link>
+      {{ message }}
     </section>
   </transition>
 </template>
@@ -21,7 +22,7 @@ export default {
       return this.$store.state.message
     }
   },
-  asyncData({ env: { spotifyId, clientUrl }, query }) {
+  asyncData({env: {spotifyId, clientUrl}, query}) {
     const spotifyUrl = `https://accounts.spotify.com/authorize?client_id=${spotifyId}&response_type=code&scope=user-read-currently-playing,user-read-recently-played&redirect_uri=${clientUrl}/api/spotify/callback`
     return {
       spotifyUrl,
@@ -80,17 +81,21 @@ section:before {
   left: 0;
   z-index: -1;
 }
+
 section:after {
   transform: rotate(1deg);
   background: rgba(255, 255, 255, 0.1);
 }
+
 section:before {
   transform: rotate(3deg);
   background: rgba(255, 255, 255, 0.03);
 }
+
 a {
   margin: auto;
 }
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 600ms ease-out;

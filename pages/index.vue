@@ -5,7 +5,7 @@
       😭 {{ $nuxt.layout && $nuxt.layout.authorName }} hasn't connected yet. 😭
       <a
         href="http://twitter.com/leehodges"
-      >Nudge her</a>
+      >Complain</a>
     </p>
   </section>
 </template>
@@ -14,7 +14,7 @@
 import NowPlaying from '~/components/NowPlaying.vue'
 
 export default {
-  components: { NowPlaying },
+  components: {NowPlaying},
   computed: {
     showTrack() {
       return this.isConnected && this.track
