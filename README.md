@@ -1,6 +1,6 @@
-# nowlistening
+# Spotify Now Listening NUXT App
 
-## Build Setup
+## What is this?
 
 ```bash NUXT Spotify now listening app. App is set to only allow user_id set through ENV to login. 
  Grabs currently playing Spotify song/podcast and displays along with current progress through track 
