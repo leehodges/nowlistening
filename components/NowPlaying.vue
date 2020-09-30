@@ -1,4 +1,5 @@
 <template>
+
   <transition name="fade">
     <section>
       <aside>
@@ -133,6 +134,7 @@ export default {
 
 <style scoped>
 section {
+
   position: relative;
   display: grid;
   grid-template-columns: 42% 58%;

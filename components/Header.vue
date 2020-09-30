@@ -4,6 +4,7 @@
       {{$nuxt.layout && $nuxt.layout.options.emojiIcon}} {{ $nuxt.layout && $nuxt.layout.options.titleShort }}
       <nuxt-link to="/auth" name="auth" aria-label="Login" :aria-current="isAuth"/>
     </h1>
+
   </header>
 </template>
 
@@ -16,14 +17,16 @@ export default {
 </script>
 
 <style scoped>
+
 h1 {
+  text-align: center;
   line-height: 0.65em;
   font-family: 'Creepster', monospace;
-  letter-spacing: 1px;
-  font-size: 13em;
+  letter-spacing: 2px;
+  font-size: 10em;
   color: #ff4d4d;
-  transform: rotate(-3deg) translateY(-50%);
-  -webkit-box-reflect: below 0px
+  transform: rotate(-4deg) translateY(-50%);
+  -webkit-box-reflect: below 2px
   linear-gradient(transparent, rgba(255, 255, 255, 0.3));
 }
 h1 a {

@@ -41,6 +41,7 @@ export default {
 </script>
 
 <style scoped>
+
 section {
   min-width: 300px;
   transform: translateY(-50%);
