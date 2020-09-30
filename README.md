@@ -30,6 +30,20 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# Environment Variable setup
+    Setup Variables for:
+    - REDIS_URL
+    - SPOTIFY_USER_ID
+    - CLIENT_URL
+    - SPOTIFY_CLIENT_ID
+    - SPOTIFY_CLIENT_SECRET
+
+# Setup Spotify App
+    Setup your spotify app with correct call back urls
+    App will only respond to spotify user id set and from urls set in client_url
+
+
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
