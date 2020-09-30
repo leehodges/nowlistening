@@ -2,7 +2,7 @@
   <footer>
     Lee Hodges 2020<br />
     🎃=-Happy Halloween-= 🎃 <br />
-   <a href="www.github.com/leehodges">github</a>
+   <a href="https://www.github.com/leehodges" target="_blank">github</a>
   </footer>
 </template>
 
