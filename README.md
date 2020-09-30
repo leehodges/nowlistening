@@ -2,6 +2,12 @@
 
 ## What is this?
 
+```bash
+  DEMO: http://leelistening.herokuapp.com
+```
+
+## What is this?
+
 ```bash NUXT Spotify now listening app. App is set to only allow user_id set through ENV to login. 
  Grabs currently playing Spotify song/podcast and displays along with current progress through track 
  Shows end user when you pause track & last track played when you finish your spotify session
