@@ -48,6 +48,7 @@ export const actions = {
         commit('nowPlayingChange', item)
         commit('isPlayingChange', is_playing)
       }
+
     } catch (err) {
       console.error(err)
     }

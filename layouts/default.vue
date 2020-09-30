@@ -15,9 +15,8 @@ import Footer from '~/components/Footer.vue'
 
 export default {
   components: { Header, Footer },
-  titleShort: 'is Coding to',
-  authorName: 'Lee',
-  test: 'China',
+  titleShort: 'Coding to',
+  authorName: ' 🎧 ',
   computed: {
     isAuth() {
       return this.$route.name === 'auth'
@@ -58,7 +57,8 @@ body {
   padding: 0;
   margin: 0;
   color: white;
-  font-family: 'Monoton', monospace;
+  font-family: 'creepster', monospace;
+  color: #F8F8FF;
 }
 .base {
   background-size: cover;

@@ -34,7 +34,8 @@ export default {
     },
     isConnected() {
       return this.$store.state.isConnected
-    }
+    },
+
   }
 }
 </script>

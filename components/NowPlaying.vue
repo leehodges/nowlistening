@@ -13,12 +13,14 @@
           <a v-if="href" :href="href">Listen?</a>
         </p>
       </div>
+
     </section>
   </transition>
 </template>
 
 <script>
 import Progress from './Progress.vue'
+import axios from "axios";
 
 export default {
   components: {Progress},
@@ -34,16 +36,25 @@ export default {
       return this.isPlaying ? 'is-playing status' : 'status'
     },
     image() {
-      const {album, image} = this.nowPlaying
+
+      let {album, image} = this.nowPlaying
       if (Boolean(album)) {
         const {url} = album.images[0]
         return url
+      } else {
+        let {show} = this.nowPlaying
+        const {url} = show.images[0]
+        return url
       }
+
+
       return Boolean(image)
         ? image
         : 'https://developer.spotify.com/assets/branding-guidelines/icon2@2x.png'
     },
+
     progress() {
+
       return this.$store.state.trackProgress
     },
     artistsList() {
@@ -115,6 +126,7 @@ export default {
   beforeDestroy() {
     clearInterval(this.staleTimer)
     clearInterval(this.trackTimer)
+
   }
 }
 </script>
