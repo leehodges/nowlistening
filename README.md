@@ -1,6 +1,6 @@
 # Spotify Now Listening NUXT App
 
-## What is this?
+## DEMO
 
 ```bash
   DEMO: http://leelistening.herokuapp.com
