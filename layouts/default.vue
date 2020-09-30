@@ -16,7 +16,8 @@ import Footer from '~/components/Footer.vue'
 export default {
   components: { Header, Footer },
   titleShort: 'Coding to',
-  authorName: ' 🎧 ',
+  authorName: 'Lee',
+  emojiIcon: ' 🎧 ',
   computed: {
     isAuth() {
       return this.$route.name === 'auth'

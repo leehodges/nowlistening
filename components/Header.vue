@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>
-      {{$nuxt.layout && $nuxt.layout.options.authorName}} {{ $nuxt.layout && $nuxt.layout.options.titleShort }}
+      {{$nuxt.layout && $nuxt.layout.options.emojiIcon}} {{ $nuxt.layout && $nuxt.layout.options.titleShort }}
       <nuxt-link to="/auth" name="auth" aria-label="Login" :aria-current="isAuth"/>
     </h1>
   </header>

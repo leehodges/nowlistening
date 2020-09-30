@@ -161,6 +161,7 @@ app.get('/spotify/now-playing/', async (req, res) => {
 
 async function setLastPlayed(access_token, item) {
   if (!Boolean(item)) {
+    debugger
     const { data } = await axios.get(
       `${spotifyBaseUrl}me/player/recently-played`,
       {
