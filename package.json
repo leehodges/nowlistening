@@ -8,12 +8,13 @@
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@nuxtjs/pwa": "^3.0.2"
+  },
   "devDependencies": {
     "@nuxt/content": "^1.8.1",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/pwa": "^3.0.2",
     "async-redis": "^1.1.7",
     "core-js": "^3.6.5",
     "node": "^14.12.0",
