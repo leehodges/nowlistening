@@ -6,20 +6,19 @@
     "dev": "nodemon --watch api --exec \"nuxt\"",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "heroku-postbuild": "npm run build"
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxt/content": "^1.8.1",
-    "@nuxtjs/axios": "^5.12.2",
-    "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/pwa": "^3.0.2",
     "async-redis": "^1.1.7",
     "core-js": "^3.6.5",
     "node": "^14.12.0",
     "nuxt": "^2.14.5"
   },
   "devDependencies": {
+    "@nuxt/content": "^1.8.1",
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/pwa": "^3.0.2",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "nodemon": "^2.0.4",
