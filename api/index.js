@@ -1,6 +1,7 @@
 import express from 'express'
-import redis from 'async-redis'
+import Redis from 'ioredis'
 import axios from 'axios'
+import redis from 'async-redis'
 
 require('dotenv').config()
 
@@ -50,7 +51,7 @@ function storageArgs(key, props) {
 async function callStorage(method, ...args) {
   const redisClient = connectToRedis()
   const response = await redisClient[method](...args)
-  redisClient.quit()
+  await redisClient.quit()
   return response
 }
 
@@ -137,7 +138,7 @@ app.get('/spotify/now-playing/', async (req, res) => {
   try {
     const access_token = await getAccessToken()
     const response = await axios.get(
-      `${spotifyBaseUrl}me/player/currently-playing?market=US&additional_types=episode`,
+      `${spotifyBaseUrl}me/player/currently-playing?market=US`,
       {
         headers: {
           withCredentials: true,
@@ -161,9 +162,8 @@ app.get('/spotify/now-playing/', async (req, res) => {
 
 async function setLastPlayed(access_token, item) {
   if (!Boolean(item)) {
-    debugger
     const { data } = await axios.get(
-      `${spotifyBaseUrl}me/player/recently-played`,
+      `${spotifyBaseUrl}me/player/recently-played?market=US`,
       {
         headers: {
           withCredentials: true,
