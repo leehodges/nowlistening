@@ -182,7 +182,7 @@ section:before {
 }
 
 h2 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Oswald', monospace;
   margin: 0;
   font-size: 3em;
 }
