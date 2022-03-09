@@ -11,7 +11,8 @@ app.use(express.json())
 // Redis
 
 function connectToRedis() {
-  const redisClient = redis.createClient(process.env.REDIS_URL)
+  console.log(process.env.REDIS_URL)
+  const redisClient = Redis.createClient(process.env.REDIS_URL)
   redisClient.on('connect', () => {
     console.log('\n🎉 Redis client connected 🎉\n')
   })
@@ -51,7 +52,7 @@ function storageArgs(key, props) {
 async function callStorage(method, ...args) {
   const redisClient = connectToRedis()
   const response = await redisClient[method](...args)
-  await redisClient.quit()
+  redisClient.quit()
   return response
 }
 
@@ -138,7 +139,7 @@ app.get('/spotify/now-playing/', async (req, res) => {
   try {
     const access_token = await getAccessToken()
     const response = await axios.get(
-      `${spotifyBaseUrl}me/player/currently-playing?market=US`,
+      `${spotifyBaseUrl}me/player/currently-playing?market=US&additional_types=episode`,
       {
         headers: {
           withCredentials: true,
@@ -162,8 +163,9 @@ app.get('/spotify/now-playing/', async (req, res) => {
 
 async function setLastPlayed(access_token, item) {
   if (!Boolean(item)) {
+    debugger
     const { data } = await axios.get(
-      `${spotifyBaseUrl}me/player/recently-played?market=US`,
+      `${spotifyBaseUrl}me/player/recently-played`,
       {
         headers: {
           withCredentials: true,
