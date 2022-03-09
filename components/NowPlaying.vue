@@ -11,7 +11,7 @@
         <p aria-live="polite">{{ artistsList }}</p>
         <p :class="statusClass">
           <span>{{ $nuxt.layout && $nuxt.layout.options.authorName }} {{ status }}.</span>
-          <a v-if="href" :href="href" target="_blank">Click Here to Listen?</a>
+          <a v-if="href" :href="href" target="_blank">Click Here to Listen</a>
         </p>
       </div>
 

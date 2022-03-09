@@ -62,7 +62,7 @@ svg.progress {
   left: 0;
   right: 0;
   bottom: 0;
-  filter: drop-shadow(0 0 3px rgba(223, 28, 224, 1)) drop-shadow(0 0 2px rgba(255, 16, 237, 1)) drop-shadow(0 0 3px rgba(255, 16, 237, 1)) drop-shadow(0 0 5px var(--colorBrightBlue)) opacity(65%) contrast(150%);
+  filter: drop-shadow(0 0 3px rgb(110, 255, 77)) drop-shadow(0 0 2px rgba(0, 207, 255, 1)) drop-shadow(0 0 3px rgba(255, 102, 143, 1)) drop-shadow(0 0 5px rgba(255, 225, 94)) opacity(65%) contrast(150%);
 }
 
 .bar {
