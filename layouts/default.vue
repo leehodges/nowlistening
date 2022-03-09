@@ -37,7 +37,7 @@ export default {
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Monoton|Oswald|Creepster'
+          href: 'https://fonts.googleapis.com/css?family=Monoton|Oswald|Orbitron|Creepster'
         }
       ]
     }
@@ -58,7 +58,7 @@ body {
   padding: 0;
   margin: 0;
   color: white;
-  font-family: 'creepster', monospace;
+  font-family: 'orbitron', monospace;
   color: #F8F8FF;
 }
 .base {

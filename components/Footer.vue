@@ -1,7 +1,6 @@
 <template functional>
   <footer>
-    Lee Hodges 2020<br />
-    🎃=-Happy Halloween-= 🎃 <br />
+    Lee Hodges 2022<br />
    <a href="https://www.github.com/leehodges" target="_blank">github</a>
   </footer>
 </template>

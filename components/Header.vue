@@ -21,10 +21,10 @@ export default {
 h1 {
   text-align: center;
   line-height: 0.65em;
-  font-family: 'Creepster', monospace;
+  font-family: 'Orbitron', monospace;
   letter-spacing: 2px;
   font-size: 10em;
-  color: #ff4d4d;
+  color: #6eff4d;
   transform: rotate(-4deg) translateY(-50%);
   -webkit-box-reflect: below 2px
   linear-gradient(transparent, rgba(255, 255, 255, 0.3));
