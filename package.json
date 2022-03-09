@@ -6,8 +6,7 @@
     "dev": "nodemon --watch api --exec \"nuxt\"",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "heroku-postbuild": "npm run build"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "async-redis": "^1.1.7",
