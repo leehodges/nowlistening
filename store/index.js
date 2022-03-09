@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const clientUrl = process.env.CLIENT_URL
+const clientUrl = "https://www.leehodges.me"
 
 export const state = () => ({
   isConnected: false,
