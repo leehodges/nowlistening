@@ -89,7 +89,7 @@ export default {
     },
     async getNowPlaying() {
       const {progress_ms, is_playing, item} = await this.$axios.$get(
-        `/api/spotify/now-playing/`
+        `https://www.leehodges.me/api/spotify/now-playing/`
       )
       if (Boolean(item)) {
         const progress = progress_ms
