@@ -37,7 +37,7 @@ export default {
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Monoton|Oswald|Orbitron|Creepster'
+          href: 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'
         }
       ]
     }
@@ -58,7 +58,7 @@ body {
   padding: 0;
   margin: 0;
   color: white;
-  font-family: 'orbitron', monospace;
+  font-family: 'Press Start 2P', cursive;
   color: #F8F8FF;
 }
 .base {

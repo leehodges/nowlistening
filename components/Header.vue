@@ -21,7 +21,7 @@ export default {
 h1 {
   text-align: center;
   line-height: 0.65em;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Press Start 2P', cursive;
   letter-spacing: 2px;
   font-size: 10em;
   color: #6eff4d;
