@@ -17,7 +17,7 @@
     "ioredis": "^4.28.5"
   },
   "devDependencies": {
-    "node": "^14.12.0",
+    "node": "^18.8.0",
     "nuxt": "^2.14.5",
     "@nuxt/content": "^1.8.1",
     "@nuxtjs/axios": "^5.12.2",
